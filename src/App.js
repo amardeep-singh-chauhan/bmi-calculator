@@ -8,8 +8,6 @@ function App() {
   const [bmi, setBmi] = useState("");
   const [message, setMessage] = useState("");
 
-  let imgsrc = "";
-
   const calcbmi = (e) => {
     e.preventDefault();
 
@@ -32,9 +30,9 @@ function App() {
       setMessage("You are Underweight");
     } else if (18.5 < bmi && bmi < 24.9) {
       setMessage("You are Normal");
-    } else if (25 < bmi && bmi < 29.9) {
+    } else if (24.9 < bmi && bmi < 29.9) {
       setMessage("You are Overweight");
-    } else if (30 < bmi) {
+    } else if (29.9 < bmi) {
       setMessage("You are in a Obesity Codition");
     } else {
       setMessage("");
